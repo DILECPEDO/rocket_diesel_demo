@@ -11,6 +11,7 @@ services:
     depends_on:
       postgres_db:
         condition: "service_healthy"
+    init: true
   postgres_db:
     container_name: test_app_database
     image: 'postgres:alpine'
